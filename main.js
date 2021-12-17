@@ -1,4 +1,9 @@
-var listSlide = ['./assets/img/slider/test1.jpg', './assets/img/slider/test2.jpg'];
+var listSlide = [
+    './assets/img/slider/slider1.jpg', 
+    './assets/img/slider/slider2.jpg',
+    './assets/img/slider/slider3.jpg',
+    './assets/img/slider/slider4.jpg',
+];
 
 function getSlider() {
     var html = getSlierString()
