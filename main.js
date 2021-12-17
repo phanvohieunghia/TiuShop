@@ -38,4 +38,4 @@ function getSlierString() {
     return html
 }
 getSlider()
-// changeSlider()
+changeSlider()
