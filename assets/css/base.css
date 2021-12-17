@@ -4,6 +4,14 @@
     --text-color: #ccc;
     --background-color: #181818;
     --primary-color: #FFDD00;
+    --footer-color: #252525;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    /* src: url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap'); */
+    /* src: url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap'); */
 }
 
 * {
