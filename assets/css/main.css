@@ -633,3 +633,26 @@
     transform: rotate(360deg) scale(1.2);
 
 }
+
+.ft-bottomfooter {
+    padding: 40px 0;
+    border-top: 1px solid #bebebe;
+    margin: 0 260px;
+    color: #bebebe;
+}
+
+.ft-vtft__copyright {
+    padding: 8px 0;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.ft-vtft__content {
+    padding: 6px 0;
+    text-align: center;
+}
+
+.ft-vtft__item {
+    margin: 0 4px; 
+    border-radius: 4px;
+}
