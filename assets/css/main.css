@@ -1,6 +1,6 @@
 /* General */
 .title {
-    font-size: 10rem;
+    font-size: 6rem;
     text-align: center;
     line-height: 80px;
     margin-bottom: 50px;
@@ -286,6 +286,7 @@
     color: var(--black-color);
     transform: rotate(0deg) scale(1);
     transition: transform 0.8s, color 0.2s ease, border 0.2s ease;
+    cursor: pointer;
 }
 
 .pd-item__icon-wrap:hover {
@@ -655,4 +656,5 @@
 .ft-vtft__item {
     margin: 0 4px; 
     border-radius: 4px;
+    cursor: pointer;
 }
