@@ -1,3 +1,13 @@
+/* General */
+.title {
+    font-size: 10rem;
+    text-align: center;
+    line-height: 80px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+/* Main */
 .app {
 
 }
@@ -15,6 +25,10 @@
     display: flex;
     align-items: center;
     margin: 0 24px;
+}
+
+.hd-brand__link {
+    height: 60px;
 }
 
 .hd-brand__logo {
@@ -160,15 +174,11 @@
 }
 
 .product {
-    padding: 110px 0px;
+    padding: 50px 0px;
 }
 
 .pd-title {
-    font-size: 10rem;
-    text-align: center;
-    line-height: 80px;
-    margin-bottom: 50px;
-    font-weight: 700;
+
 }
 
 .pd-container {
@@ -256,18 +266,147 @@
     border: 1px solid var(--black-color);
     background-color: var(--white-color);
     transform: rotate(360deg) scale(1.2);
+}
 
+.parallax-banner {
+    height: 388px;
+    padding: 100px 0;
+    background-image: url(../img/parallex_banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.prlbn-wrap {
+    margin-left: 50%;
+    margin-right: 10%;
+}
+
+.prlbn-maxim {
+    display: inline-block;
+    font-size: 1.9rem;
+    padding: 16px 0;
+    border: 1px solid var(--primary-color);
+    width: 350px;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.prlbn-title {
+    font-size: 7.8rem;
+    line-height: 80px;
+    margin: 20px 0;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+.prlbn-title--small {
+    font-weight: 400;
+}
+
+.brlbn-subtitle {
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: #888888;
+    margin-bottom: 40px;
+}
+
+.brlbn-btn {
+}
+
+.brlbn-link {
+    color: var(--black-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    padding: 10px 32px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
 
 }
 
-.pd-item__icon-eye {
+.brlbn-link:hover {
+    color: var(--white-color);
+    background-color: #242424;
+    border: 1px solid var(--white-color);
+}
+
+.blog {
+    padding: 50px 0;
+}
+
+.bl-title {
+}
+
+.bl-container {
 
 }
 
-.pd-item__icon-cart {
+.bl-item {
+    
+}
+
+.bl-item__img {
+    padding-top: 100%;
+    border-radius: 4px;
+}
+
+
+.bl-item__date-comment {
+    font-size: 1.6rem;
+    margin: 16px 0;
+}
+.bl-item__date {
 
 }
 
+.bl-item__comment {
+
+}
+
+.bl-item__title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 20px;
+    color: #222222;
+    margin: 18px 0;
+
+}
+
+.bl-item__content {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 24px;
+    color: #777777;
+    min-height: 150px;
+
+}
+
+.bl-item__btn {
+    margin-top: 8px;
+}
+.bl-item__link {
+    color: var(--black-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    padding: 10px 32px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 2px;
+    line-height: 40px;
+}
+
+.bl-item__link:hover {
+    color: var(--black-color);
+    background-color: var(--white-color);
+    border: 1px solid var(--black-color);
+    animation: changeColor ease-in-out 0.3s;
+}
 
 
 .promotion {
@@ -312,7 +451,7 @@
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
     text-decoration: none;
-    padding: 16px 32px;
+    padding: 10px 32px;
     font-size: 1.4rem;
     font-weight: 600;
     border-radius: 2px;
@@ -350,8 +489,6 @@
     background-color: var(--footer-color);
     color: var(--white-color);
     font-family: 'Inter', sans-serif;
-    /* font-family: 'Chakra Petch', sans-serif; */
-
 }
 
 .ft-list {
@@ -365,24 +502,42 @@
     position: relative;
 }
 
-.ft-about {
-    width: 200px;
-}
-
-.ft-help {
-    width: 180px;
-
-}
-
-.ft-policy {
-    width: 150px;
-
-}
-
 .ft-information {
     width: 400px;
 }
 
+.ft-information__title {
+    position: relative;
+}
+
+.ft-information__brand {
+    background: url(../img/tuishop_logo_full.png) left center / contain no-repeat;
+    display: inline-block;
+    position: absolute;
+    width: 250px;
+    padding-top: 18%;
+    top: 0;
+    left: 0;
+}
+
+.ft-information__content {
+    margin-top: 65px;
+}
+
+.ft-about {
+    width: 200px;
+}
+
+
+.ft-help {
+    width: 180px;
+    
+}
+
+.ft-policy {
+    width: 150px;
+    
+}
 
 .ft-title {
     font-size: 1.8rem;
@@ -397,6 +552,10 @@
     position: absolute;
     width: 30px;
     top: 45px;
+}
+
+.ft-information__title::after {
+    visibility: hidden;
 }
 
 .ft-content {
@@ -433,7 +592,7 @@
     line-height: 47px;
     border-radius: 50%;
     margin: 20px 4px;
-    transition: transform 0.8s, color 0.2s ease, border 0.2s ease;
+    transition: transform 0.8s ease, color 0.2s ease, border 0.2s ease;
     transform: rotate(0deg) scale(1);
 
 }
