@@ -31,9 +31,13 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
-    margin: 80px 0;
-    /* margin-left: 30px;
-    margin-right: 30px; */
+    margin-bottom: 80px;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+
+.test {
+    flex-direction: row;
 }
 
 .grid__column-12 {
@@ -52,4 +56,16 @@ html {
     padding-left:30px;
     padding-right:30px;
     width: 20%;
+}
+
+.grid__column-2-4 {
+    padding-left:30px;
+    padding-right:30px;
+    width: 20%;
+}
+
+.grid__column-9-6 {
+    padding-left:30px;
+    padding-right:30px;
+    width: 80%;
 }
