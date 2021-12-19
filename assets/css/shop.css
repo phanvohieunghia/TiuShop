@@ -96,6 +96,7 @@
     height: var(--height);
     line-height: var(--height);
     text-align: center;
+    
 }
 
 .pag-item__icon {
