@@ -35,7 +35,6 @@ let products = [
     {"id": "31", "name": "", "oldPrice": 190, "currentPrice": 200, "img": "product31"},
     {"id": "32", "name": "", "oldPrice": 190, "currentPrice": 200, "img": "product32"},
     {"id": "32", "name": "", "oldPrice": 190, "currentPrice": 200, "img": "product32"}
-
 ]
 
 
@@ -69,7 +68,7 @@ function renderPage(key) {
                     </div>
                     <div class="pd-item__icon">
                         <div class="pd-item__icon-wrap">
-                            <i class="fal fa-eye"></i>
+                            <i class="fal fa-search"></i>
                         </div>
                         <div class="pd-item__icon-wrap">
                             <i class="fal fa-shopping-cart"></i>
