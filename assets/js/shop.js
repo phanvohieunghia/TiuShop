@@ -67,10 +67,10 @@ function renderPage(key) {
                         <span class="pd-item__price-current">999.000đ</span>
                     </div>
                     <div class="pd-item__icon">
-                        <div class="pd-item__icon-wrap">
+                        <div class="pd-item__icon-wrap pd-item__icon-search">
                             <i class="fal fa-search"></i>
                         </div>
-                        <div class="pd-item__icon-wrap">
+                        <div class="pd-item__icon-wrap pd-item__icon-cart">
                             <i class="fal fa-shopping-cart"></i>
                         </div>
                     </div>
@@ -84,7 +84,16 @@ function renderPage(key) {
         }
     })    
     $('.home-product').innerHTML = htmls
+    linkDetailProduct()
 }
+
+function linkDetailProduct() {
+    $('.pd-item__icon-search').onclick = function() {
+        location.href = './detail.html'
+        console.log('nghia')
+    }
+}
+
 function renderPagination() {
     const pagination = document.querySelector('.home-pagination')
     let htmls = ''

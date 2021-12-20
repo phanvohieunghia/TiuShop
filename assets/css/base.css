@@ -74,6 +74,11 @@ html {
     width: 80%;
 }
 
+.grid__column-6 {
+    padding-left:30px;
+    padding-right:30px;
+    width: 50%;
+}
 
 /* Header */
 

@@ -1,0 +1,165 @@
+.dt-img {
+    padding-top: 100%;
+}
+
+.dt-content {
+
+}
+
+.dt-content__name {
+    font-size: 3rem;
+    padding: 10px 0;
+}
+
+.dt-content__rating {
+    font-size: 1.4rem;
+    padding: 8px 0;
+    color: #D5D5D5;
+}
+
+.dt-content__rating-gold {
+    color: #ffce3e;
+}
+
+.dt-content__old-price {
+    font-size: 1.6rem;
+    padding: 8px 0;
+    text-decoration: line-through;
+    color: #999;
+}
+
+.dt-content__current-price {
+    padding: 8px 0;
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+
+.dt-content__size {
+    font-size: 1.4rem;
+    color: #777;
+    margin-top: 16px;
+}
+
+.dt-content__size-title {
+    padding-bottom: 4px;
+}
+
+.dt-content__size-content {
+    margin: 0 -6px;
+}
+
+.dt-content__size-type {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #999;
+    margin: 6px;
+    border-radius: 2px;
+}
+
+.dt-content__size-type:hover {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.dt-content__size-s {
+
+}
+
+.dt-content__size-m {
+
+}
+
+.dt-content__size-l {
+
+}
+
+.dt-content__color {
+    font-size: 1.4rem;
+    color: #777;
+    margin-top: 16px;
+}
+
+.dt-content__color-title {
+    padding-bottom: 4px;
+}
+
+.dt-content__color-content {
+    margin: 0 -6px;
+}
+
+.dt-content__color-type {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #999;
+    margin: 6px;
+    border-radius: 2px;
+}
+
+.dt-content__color-type:hover {
+    border: 1px solid var(--primary-color);
+}
+
+.dt-content__color-1 {
+    background-color: gray;
+}
+
+.dt-content__color-2 {
+    background-color: rosybrown;
+}
+
+.dt-content__color-3 {
+    background-color: beige;
+}
+
+.dt-content__quantity {
+    font-size: 1.4rem;
+    color: #777;
+    margin-top: 16px;
+}
+
+.dt-content__quantity-title {
+    padding-bottom: 4px;
+}
+
+.dt-content__quantity-content {
+}
+
+.dt-content__quantity-number {
+    display: inline-flex;
+}
+
+.dt-content__quantity-type {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #999;
+    border-radius: 2px;
+}
+
+.dt-content__quantity-1 {
+    border-right: none;
+}
+
+.dt-content__quantity-2 {
+    padding: 8px 20px;
+    font-weight: 500;
+    border-right: none;
+}
+
+.dt-content__quantity-3 {
+
+}
+
+.dt-content__quantity-cart {
+    padding: 8px 32px;
+    margin-left: 20px;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    border: solid 1px transparent;
+    font-weight: 500;
+    border-radius: 2px;
+    transition: all 0.5s ease;
+}
+
+.dt-content__quantity-cart:hover {
+    background-color: var(--black-color);
+    color: var(--white-color);
+}
