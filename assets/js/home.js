@@ -99,10 +99,12 @@ function renderProduct() {
 }
 
 function linkDetailProduct() {
-    $('.pd-item__icon-search').onclick = function() {
-        location.href = '../../detail.html'
-        console.log('nghia')
-    }
+    $$('.pd-item__icon-search').forEach(function(item, index) {
+        item.onclick = function() {
+            location.href = '../../detail.html'
+            console.log('nghia')
+        }
+    })
 }
 
 getSlider()
