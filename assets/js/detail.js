@@ -13,10 +13,8 @@ function hoverRating() {
                 } else {
                     star2.classList.remove('dt-content__rating-gold')
                 }
-                
             })
         }
-
     })
     $('.dt-content__rating').onmouseout = function() {
         stars.forEach(function(star, index) {
@@ -27,7 +25,6 @@ function hoverRating() {
             }
         })
     }
-
 }
 
 function updateQuantity() {
@@ -43,8 +40,30 @@ function updateQuantity() {
         number++
         quantity.innerHTML = number
     }
+}
 
+function sliceLine() {
+    const tabs = $$('.tabs-header__item')
+    const panes = $$('.tabs-pane__item')
+    const tabActive = $('.tabs-header__item.tabs-header__item--active')
+    const tabLine = $('.tabs-header__line')
+    tabLine.style.left = tabActive.offsetLeft + 'px'
+    tabLine.style.width = tabActive.offsetWidth + 'px'
+    
+    tabs.forEach(function(tab, index) {
+        const pane = panes[index]
+        tab.onclick = function() {
+            $('.tabs-header__item.tabs-header__item--active').classList.remove('tabs-header__item--active')
+            $('.tabs-pane__item.tabs-pane__item--active').classList.remove('tabs-pane__item--active')
+
+            tabLine.style.left = this.offsetLeft + 'px'
+            tabLine.style.width = this.offsetWidth + 'px'        
+            this.classList.add('tabs-header__item--active')
+            pane.classList.add('tabs-pane__item--active')
+        }
+    })
 }
 
 hoverRating()
 updateQuantity()
+sliceLine()
