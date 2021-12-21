@@ -39,7 +39,7 @@ function renderPage(key, productList) {
                         <span class="pd-item__price-current">${item.currentPrice}.000đ</span>
                     </div>
                     <div class="pd-item__icon">
-                        <div class="pd-item__icon-wrap pd-item__icon-search">
+                        <div class="pd-item__icon-wrap pd-item__icon-search" data="${item.id}">
                             <i class="fal fa-search"></i>
                         </div>
                         <div class="pd-item__icon-wrap pd-item__icon-cart">
@@ -63,7 +63,7 @@ function linkDetailProduct() {
     $$('.pd-item__icon-search').forEach(function(item, index) {
         item.onclick = function() {
             location.href = '../../detail.html'
-            console.log('nghia')
+            sessionStorage.setItem('dataDetail', item.getAttribute('data'))
         }
     })
 }
