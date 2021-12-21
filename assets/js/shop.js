@@ -150,7 +150,7 @@ function filterProduct() {
 function updateBreadcrumbs(value) {
     let htmls = ''
     htmls += `
-        <a href="./home.html" class="bc-item bc-brand">TiuShop Home page</a>
+        <a href="./home.html" class="bc-item bc-brand">TiuShop Home Page</a>
         <a class="bc-item bc-slash">/</a>
         <a href="" class="bc-item bc-category">${value}</a>
     `
