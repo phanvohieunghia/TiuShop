@@ -24,13 +24,13 @@ export function renderHeader() {
                 <div class="hd-navigation__item-decor"></div>
             </li>
             <li class="hd-navigation__item">
-                <a href=".home.html" class="hd-navigation__item-link">
+                <a href="./blog.html" class="hd-navigation__item-link">
                     Blog
                 </a>
                 <div class="hd-navigation__item-decor"></div>
             </li>
             <li class="hd-navigation__item">
-                <a href="./Home.html" class="hd-navigation__item-link">
+                <a href="#" class="hd-navigation__item-link">
                     Contact
                 </a>
                 <div class="hd-navigation__item-decor"></div>
@@ -153,4 +153,14 @@ export function renderFooter() {
     </div>
     `
     $_main('.footer').innerHTML = htmls
+}
+
+export function renderBreadScrum() {
+    let htmls = ''
+    htmls += `
+        <a href="./home.html" class="bc-item bc-brand">Trang Chủ TiuShop</a>
+        <a class="bc-item bc-slash">/</a>
+        <a href="" class="bc-item bc-category">Tất Cả Sản Phẩm</a>
+    `
+    $_main('.breadcrumbs').innerHTML = htmls
 }

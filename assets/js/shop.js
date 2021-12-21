@@ -1,8 +1,10 @@
 import {preProducts} from './data.js'
-import { renderHeader, renderFooter } from './main.js'
+import { renderHeader, renderFooter, renderBreadScrum } from './main.js'
 
 renderHeader()
 renderFooter()
+renderBreadScrum()
+
 
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)

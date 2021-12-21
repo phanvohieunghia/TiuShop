@@ -53,3 +53,7 @@ export let preSlỉder = [
     './assets/img/slider/slider3.jpg',
     './assets/img/slider/slider4.jpg',
 ]
+
+export let preBlogs = [
+    
+]

@@ -36,8 +36,8 @@ html {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 80px;
-    margin-left: -30px;
-    margin-right: -30px;
+    margin-left: - 20px;
+    margin-right: - 20px;
 }
 
 .test {
@@ -45,43 +45,80 @@ html {
 }
 
 .grid__column-12 {
-    padding-left:30px;
-    padding-right:30px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 100%;
 }
 
 .grid__column-3 {
-    padding-left:30px;
-    padding-right:30px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 25%;
 }
 
 .grid__column-4 {
-    padding-left:30px;
-    padding-right:30px;
-    width: 20%;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 33.3333%;
+}
+
+.grid__column-8 {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 66.6667%;
 }
 
 .grid__column-2-4 {
-    padding-left:30px;
-    padding-right:30px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 20%;
 }
 
 .grid__column-9-6 {
-    padding-left:30px;
-    padding-right:30px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 80%;
 }
 
 .grid__column-6 {
-    padding-left:30px;
-    padding-right:30px;
+    padding-left: 20px;
+    padding-right: 20px;
     width: 50%;
 }
 
-/* Header */
+/* --------------------Button */
+.btn {
+    color: var(--black-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    text-decoration: none;
+    padding: 10px 32px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 2px;
+    line-height: 40px;
+    transition: all 0.3s ease-in-out;
+}
 
+.btn:hover {
+    color: var(--black-color);
+    background-color: var(--white-color);
+    border: 1px solid var(--black-color);
+    animation: changeColor ease-in-out 0.3s;
+}
+
+@keyframes changeColor {
+    from {
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    }
+    to {
+    border: 1px solid var(--black-color);
+    background-color: var(--white-color);
+    }
+}
+
+/* --------------------Header */
 .header {
     display: flex;
     height: 80px;
@@ -216,7 +253,7 @@ html {
     border: 3px solid black;
     z-index: 1;
 }
-/* Footer */
+/* --------------------Footer */
 
 
 .footer {
@@ -363,4 +400,111 @@ html {
     margin: 0 4px; 
     border-radius: 4px;
     cursor: pointer;
+}
+
+/* --------------------Breadcrumbs */
+.grid__row-breadcrumbs {
+    margin: 20px;
+}
+.breadcrumbs {
+    font-size: 1.4rem;
+}
+
+.bc-item {
+    text-decoration: none;
+    color: var(--block-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.bc-item:hover {
+    color: var(--primary-color);
+}
+
+.bc-brand {
+
+}
+
+.bc-slash {
+    padding: 0 4px;
+}
+
+.bc-category {
+    
+}
+
+/* --------------------Category */
+.category {
+    border: 3px solid #f1f1f1;
+}
+
+.category-heading {
+    background-color: #f1f1f1;
+    font-size: 1.8rem;
+    padding: 10px 16px;
+    font-weight: 500;
+}
+
+.category-list {
+    padding: 15px;
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.category-item {
+    
+}
+
+.category-item:hover .category-item__link{
+    color: var(--primary-color);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+    padding-left: 8px;
+}
+
+.category-item__link {
+    display: inline-block;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--black-color);
+    padding: 8px 0;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.0);
+    transition: all 0.3s ease-in-out;
+}
+
+/* --------------------Pagination */
+.home-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.pag-item {
+    margin: 0 16px;
+    border-radius: 2px;
+}
+
+.pag-item--active {
+    background-color: var(--primary-color);
+    color: var(--black-color);
+}
+
+.pag-item--active .pag-item__link {
+    color: var(--black-color);
+}
+
+.pag-item__link {
+    --height: 30px;
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height: var(--height);
+    line-height: var(--height);
+    text-align: center;
+    
+}
+
+.pag-item__icon {
+
 }
