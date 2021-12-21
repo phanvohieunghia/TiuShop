@@ -64,10 +64,10 @@ function renderProduct() {
                 <!-- Product -->
                 <div class="pd-item">
                     <div class="pd-item__img" style="background-image: url(./assets/img/product/${item.img}.jpg)"></div>
-                    <div class="pd-item__name">Short Steve</div>
+                    <div class="pd-item__name">${item.name}</div>
                     <div class="pd-item__price">
-                        <span class="pd-item__price-old">2.000.000đ</span>
-                        <span class="pd-item__price-current">999.000đ</span>
+                        <span class="pd-item__price-old">${item.oldPrice}.000đ</span>
+                        <span class="pd-item__price-current">${item.currentPrice}.000đ</span>
                     </div>
                     <div class="pd-item__icon">
                         <div class="pd-item__icon-wrap pd-item__icon-search">

@@ -158,9 +158,9 @@ export function renderFooter() {
 export function renderBreadScrum() {
     let htmls = ''
     htmls += `
-        <a href="./home.html" class="bc-item bc-brand">Trang Chủ TiuShop</a>
+        <a href="./home.html" class="bc-item bc-brand">Trang chủ TiuShop</a>
         <a class="bc-item bc-slash">/</a>
-        <a href="" class="bc-item bc-category">Tất Cả Sản Phẩm</a>
+        <a href="" class="bc-item bc-category">Tất cả sản phẩm</a>
     `
     $_main('.breadcrumbs').innerHTML = htmls
 }

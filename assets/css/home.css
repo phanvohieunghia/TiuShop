@@ -102,6 +102,7 @@
     font-size: 2.2rem;
     padding: 16px 0;
     font-weight: 500;
+    line-height: 2.4rem;
 }
 
 .pd-item__price {
@@ -115,10 +116,12 @@
 .pd-item__price-old {
     text-decoration: line-through;
     font-size: 1.6rem;
+    font-weight: 400;
 }
 
 .pd-item__price-current {
-    
+    font-size: 2rem;
+    font-weight: 500;
 }
 
 .pd-item__icon {

@@ -1,4 +1,4 @@
-import {preProducts} from './data.js'
+import {categories, preProducts} from './data.js'
 import { renderHeader, renderFooter, renderBreadScrum } from './main.js'
 
 renderHeader()
@@ -14,11 +14,11 @@ let perPage = 12
 let totalPage = Math.ceil(products.length / perPage)
 
 
-function renderPage(key) {
+function renderPage(key, productList) {
     let perPost = []
     let itemRow = 4
     let htmls = ''
-    perPost = products.slice(
+    perPost = productList.slice(
         (key - 1) * perPage,
         (key - 1) * perPage + perPage
     )
@@ -33,10 +33,10 @@ function renderPage(key) {
                 <!-- Product -->
                 <div class="pd-item">
                     <div class="pd-item__img" style="background-image: url(./assets/img/product/${item.img}.jpg)"></div>
-                    <div class="pd-item__name">Short Steve</div>
+                    <div class="pd-item__name">${item.name}</div>
                     <div class="pd-item__price">
-                        <span class="pd-item__price-old">2.000.000đ</span>
-                        <span class="pd-item__price-current">999.000đ</span>
+                        <span class="pd-item__price-old">${item.oldPrice}.000đ</span>
+                        <span class="pd-item__price-current">${item.currentPrice}.000đ</span>
                     </div>
                     <div class="pd-item__icon">
                         <div class="pd-item__icon-wrap pd-item__icon-search">
@@ -68,7 +68,7 @@ function linkDetailProduct() {
     })
 }
 
-function renderPagination() {
+function renderPagination(number) {
     const pagination = document.querySelector('.home-pagination')
     let htmls = ''
     htmls += `
@@ -78,7 +78,7 @@ function renderPagination() {
     </a>
     </li> 
     `
-    for(let i = 0; i < totalPage; i++) {
+    for(let i = 0; i < number; i++) {
         htmls += `
         <li class="pag-item">
         <a class="pag-item__link">${i+1}</a>
@@ -106,11 +106,60 @@ function activePaginationItem() {
                 const pagItem = document.querySelector('.pag-item.pag-item--active')
                 pagItem.classList.remove('pag-item--active')
                 pagItems[index].classList.add('pag-item--active')
-                renderPage(index)
+                renderPage(index, products)
             }, 0.5*1000)
         }
     })
 }
-renderPage(1)
-renderPagination()
+
+function showCategory() {
+    let htmls = ''
+    categories.forEach(function(category, index) {
+        htmls += `
+        <li class="category-item">
+            <a class="category-item__link">${category}</a>
+        </li>
+        `
+    })
+    $('.category-list').innerHTML = htmls
+}
+
+function filterProduct() {
+    const categoryItems = $$('.category-item')
+    categoryItems.forEach(function(item, index) {
+        item.onclick = function() {
+            updateBreadcrumbs(categories[index])
+            let newProduct = []
+            products.forEach(function(item2, i) {
+                if (item2.type === categories[index]) {
+                    newProduct.push(item2)
+                }
+            })
+            if (index != 0) {
+                renderPage(1, newProduct)
+                let newTotalPage = Math.ceil(newProduct.length / perPage)
+                renderPagination(newTotalPage)
+            } else {
+                renderPage(1, products)
+                renderPagination(totalPage)
+            }
+        }
+    })
+}
+
+function updateBreadcrumbs(value) {
+    let htmls = ''
+    htmls += `
+        <a href="./home.html" class="bc-item bc-brand">TiuShop Home page</a>
+        <a class="bc-item bc-slash">/</a>
+        <a href="" class="bc-item bc-category">${value}</a>
+    `
+    $('.breadcrumbs').innerHTML = htmls
+
+}
+
+showCategory()
+renderPage(1, products)
+renderPagination(totalPage)
 activePaginationItem()
+filterProduct()
