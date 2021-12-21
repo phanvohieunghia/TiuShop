@@ -1,7 +1,7 @@
 const $_main = document.querySelector.bind(document)
 const $$_main = document.querySelectorAll.bind(document)
 
-function renderHeader() {
+export function renderHeader() {
     let htmls = ''
     htmls += `
     <div class="hd-brand">
@@ -53,7 +53,7 @@ function renderHeader() {
     $_main('.header').innerHTML = htmls
 }
 
-function renderFooter() {
+export function renderFooter() {
     let htmls = ''
     htmls += `
     <div class="ft-list">
@@ -92,9 +92,7 @@ function renderFooter() {
                         <a href="https://github.com/phvohieunghia/TiuShop" class="ft-content__social">
                             <i class="ft-content__social-icon fab fa-github"></i>
                         </a>    
-
                     </li>    
-                    
                 </ul>    
             </div>    
         </div>    
@@ -156,6 +154,3 @@ function renderFooter() {
     `
     $_main('.footer').innerHTML = htmls
 }
-
-renderHeader()
-renderFooter()

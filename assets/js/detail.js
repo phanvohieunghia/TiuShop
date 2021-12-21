@@ -1,3 +1,8 @@
+import { renderHeader, renderFooter } from "./main.js"
+
+renderHeader()
+renderFooter()
+
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 

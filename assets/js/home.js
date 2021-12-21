@@ -1,23 +1,15 @@
+import {preProducts, preSlỉder} from './data.js'
+import { renderHeader, renderFooter } from './main.js'
+
+renderHeader()
+renderFooter()
+
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
 
-var listSlide = [
-    './assets/img/slider/slider1.jpg', 
-    './assets/img/slider/slider2.jpg',
-    './assets/img/slider/slider3.jpg',
-    './assets/img/slider/slider4.jpg',
-];
-
-let products = [
-    {"id": "1", "name": "", "oldPrice": 190, "currentPrice": 200, "img": "product1"},
-    {"id": "2", "name": "", "oldPrice": 190, "currentPrice": 200, "img": "product2"},
-    {"id": "3", "name": "", "oldPrice": 190, "currentPrice": 200, "img": "product3"},
-    {"id": "4", "name": "", "oldPrice": 190, "currentPrice": 200, "img": "product4"},
-    {"id": "5", "name": "", "oldPrice": 190, "currentPrice": 200, "img": "product5"},
-    {"id": "6", "name": "", "oldPrice": 190, "currentPrice": 200, "img": "product6"},
-    {"id": "7", "name": "", "oldPrice": 190, "currentPrice": 200, "img": "product7"},
-    {"id": "8", "name": "", "oldPrice": 190, "currentPrice": 200, "img": "product8"}
-]
+var listSlide = preSlỉder
+let ranNum = 5
+let products = preProducts.slice(ranNum, ranNum + 8)
 
 function getSlider() {
     var html = getSlierString()
