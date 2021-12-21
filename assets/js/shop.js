@@ -112,18 +112,6 @@ function activePaginationItem() {
     })
 }
 
-function showCategory() {
-    let htmls = ''
-    categories.forEach(function(category, index) {
-        htmls += `
-        <li class="category-item">
-            <a class="category-item__link">${category}</a>
-        </li>
-        `
-    })
-    $('.category-list').innerHTML = htmls
-}
-
 function filterProduct() {
     const categoryItems = $$('.category-item')
     categoryItems.forEach(function(item, index) {
@@ -155,7 +143,18 @@ function updateBreadcrumbs(value) {
         <a href="" class="bc-item bc-category">${value}</a>
     `
     $('.breadcrumbs').innerHTML = htmls
+}
 
+function showCategory() {
+    let htmls = ''
+    categories.forEach(function(category, index) {
+        htmls += `
+        <li class="category-item">
+            <a class="category-item__link">${category}</a>
+        </li>
+        `
+    })
+    $('.category-list').innerHTML = htmls
 }
 
 showCategory()

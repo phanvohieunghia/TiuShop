@@ -56,7 +56,13 @@ export let preSlỉder = [
     './assets/img/slider/slider3.jpg',
     './assets/img/slider/slider4.jpg',
 ]
-
+export let preBlogType = [
+    "Clothing Goods",
+    "City Street Cub",
+    "Designs Street",
+    "Closet Leader",
+    "Smart Wear"
+]
 export let preBlogs = [
     {id: 1, name: "Libero lorem vehicula qunato verbl", type: "Clothing Goods", date: "21/12/2021", image: "blog1", description: "Libero lorem vehicula qunato verbl Libero lorem vehicula qunato verbl Libero lorem vehicula qunato verbl"},
     {id: 2, name: "Libero loremnun ivftrc vehicula", type: "City Street Cub", date: "20/12/2021", image: "blog2", description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},

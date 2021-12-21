@@ -126,11 +126,27 @@ html {
     align-items: center;
 }
 
+.hd-menu {
+    width: 70px;
+    height: 80px;
+    align-items: center;
+    justify-content: space-evenly;
+    display: none;
+}
+
+.hd-menu__icon {
+    color: var(--white-color);
+    font-size: 2.6rem;
+    padding: 20px;
+    cursor: pointer;
+}
+
 .hd-brand {
     height: 80px;
     display: flex;
     align-items: center;
-    margin: 0 24px;
+    /* vertical-align: middle; */
+    margin: 0 20px;
 }
 
 .hd-brand__link {
@@ -502,7 +518,6 @@ html {
     height: var(--height);
     line-height: var(--height);
     text-align: center;
-    
 }
 
 .pag-item__icon {

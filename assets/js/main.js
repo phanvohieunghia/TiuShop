@@ -4,6 +4,37 @@ const $$_main = document.querySelectorAll.bind(document)
 export function renderHeader() {
     let htmls = ''
     htmls += `
+    <div class="hd-menu">
+        <div class="hd-menu__icon">
+            <i class="fad fa-bars"></i>
+            <ul class="hd-menu-child__list">
+                <li class="hd-menu-child__item">
+                    <a href="./home.html" class="hd-menu-child__item-link">
+                        Home
+                    </a>
+                    <div class="hd-menu-child__item-decor"></div>
+                </li>
+                <li class="hd-menu-child__item">
+                    <a href="./shop.html" class="hd-menu-child__item-link">
+                        Shop
+                    </a>
+                    <div class="hd-menu-child__item-decor"></div>
+                </li>
+                <li class="hd-menu-child__item">
+                    <a href="./blog.html" class="hd-menu-child__item-link">
+                        Blog
+                    </a>
+                    <div class="hd-menu-child__item-decor"></div>
+                </li>
+                <li class="hd-menu-child__item">
+                    <a href="#" class="hd-menu-child__item-link">
+                        Contact
+                    </a>
+                    <div class="hd-menu-child__item-decor"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="hd-brand">
         <a href="./home.html" class="hd-brand__link">
             <img class="hd-brand__logo" src="./assets/img/tuishop_logo_full.png" alt="">
@@ -34,7 +65,7 @@ export function renderHeader() {
                     Contact
                 </a>
                 <div class="hd-navigation__item-decor"></div>
-                </li>
+            </li>
         </ul>
     </nav>
     <div class="hd-search">
@@ -164,3 +195,4 @@ export function renderBreadScrum() {
     `
     $_main('.breadcrumbs').innerHTML = htmls
 }
+
