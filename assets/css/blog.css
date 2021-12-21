@@ -1,0 +1,57 @@
+.bl-item {
+
+}
+
+.bl-item__img {
+    background: url('../img/blog/blog1.jpg') right center / cover no-repeat;
+    padding-top: 100%;
+}
+
+.bl-item__content {
+
+}
+
+.bl-item__name {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 22px;
+}
+
+.bl-item__date {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+
+}
+
+.bl-item__text {
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: #777777;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.bl-item__read {
+
+}
+
+.bl-item__link {
+
+}
+
+.bl-more {
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bl-more__text {
+    margin: 0 5px;
+}
+.bl-more__icon {
+    height: 40px;
+    padding-top: 3px;
+    margin: 0 5px;
+}

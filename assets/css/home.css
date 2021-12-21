@@ -210,19 +210,10 @@
 }
 
 .brlbn-link {
-    color: var(--black-color);
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    text-decoration: none;
-    padding: 10px 32px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    border-radius: 2px;
-    transition: all 0.3s ease-in-out;
-
 }
 
 .brlbn-link:hover {
+    animation: none;
     color: var(--white-color);
     background-color: #242424;
     border: 1px solid var(--white-color);
@@ -277,32 +268,16 @@
     font-weight: 500;
     line-height: 24px;
     color: #777777;
-    min-height: 150px;
-
+    min-height: 120px;
+    font-weight: 400;
 }
 
 .bl-item__btn {
     margin-top: 8px;
 }
 .bl-item__link {
-    color: var(--black-color);
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    text-decoration: none;
-    padding: 10px 32px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    border-radius: 2px;
-    line-height: 40px;
-}
 
-.bl-item__link:hover {
-    color: var(--black-color);
-    background-color: var(--white-color);
-    border: 1px solid var(--black-color);
-    animation: changeColor ease-in-out 0.3s;
 }
-
 
 .promotion {
 
@@ -321,7 +296,6 @@
     font-size: 5rem;
     font-weight: 700;
     text-align: center;
-
 }
 
 .pmt-content {
@@ -331,7 +305,6 @@
     font-size: 3rem;
     font-weight: 300;
     text-align: center;
-
 }
 
 .pmt-btn {
@@ -342,32 +315,11 @@
 }
 
 .pmt-link {
-    color: var(--black-color);
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    text-decoration: none;
-    padding: 10px 32px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    border-radius: 2px;
+
 }
 
 .pmt-link:hover {
-    color: var(--black-color);
-    background-color: var(--white-color);
-    border: 1px solid var(--black-color);
-    animation: changeColor ease-in-out 0.3s;
-}
 
-@keyframes changeColor {
-    from {
-    border: 1px solid var(--primary-color);
-    background-color: var(--primary-color);
-    }
-    to {
-    border: 1px solid var(--black-color);
-    background-color: var(--white-color);
-    }
 }
 
 .brand {
