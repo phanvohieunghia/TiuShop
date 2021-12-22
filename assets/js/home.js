@@ -51,16 +51,13 @@ function getSlierString() {
 }
 
 function renderProduct() {
-    let itemRow = 4
     let htmls = ''
+    htmls += `
+    <div class="grid__row">
+    `
     products.forEach(function(item, index) {
-        if (index % itemRow == 0) {
-            htmls += `
-            <div class="grid__row">
-            `
-        }
         htmls += `
-            <div class="grid__column-3">
+            <div class="grid__column-3 mr-20 grid__column-4-s">
                 <!-- Product -->
                 <div class="pd-item">
                     <div class="pd-item__img" style="background-image: url(./assets/img/product/${item.img}.jpg)"></div>
@@ -80,12 +77,10 @@ function renderProduct() {
                 </div>
             </div>
         `
-        if (index % itemRow == 3) {
-            htmls += `
-            </div>
-            `
-        }
     })
+    htmls += `
+    </div>
+    `
     $('.home-product').innerHTML = htmls
     linkDetailProduct()
 }
@@ -99,6 +94,20 @@ function linkDetailProduct() {
     })
 }
 
+function toggleMenu() {
+    const menu = $('.hd-menu-child__list')
+    menu.style.display = 'none'
+    $('.hd-menu__icon').onclick = function() {
+        if(menu.style.display == 'none') {
+            menu.style.display = 'block'
+
+        } else if(menu.style.display == 'block') {
+            menu.style.display = 'none'
+        }
+    }
+}
+
 getSlider()
 changeSlider()
 renderProduct()
+toggleMenu()
