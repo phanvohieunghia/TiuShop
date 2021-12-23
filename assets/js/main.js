@@ -128,18 +128,20 @@ export function renderFooter() {
             </div>    
         </div>    
         <div class="ft-item ft-about">
-            <div class="ft-title">
-                About
-            </div>    
-            <div class="ft-content">
-                <ul class="ft-content__list">
-                    <li class="ft-content__item">About Us</li>
-                    <li class="ft-content__item">Delivery Information</li>
-                    <li class="ft-content__item">Privacy Policy</li>
-                    <li class="ft-content__item">Terms & Conditions</li>
-                    <li class="ft-content__item">Contact Us</li>
-                </ul>    
-            </div>    
+            <div class="ft-about-wrap">
+                <div class="ft-title">
+                    About
+                </div>    
+                <div class="ft-content">
+                    <ul class="ft-content__list">
+                        <li class="ft-content__item">About Us</li>
+                        <li class="ft-content__item">Delivery Information</li>
+                        <li class="ft-content__item">Privacy Policy</li>
+                        <li class="ft-content__item">Terms & Conditions</li>
+                        <li class="ft-content__item">Contact Us</li>
+                    </ul>    
+                </div>
+            </div>
         </div>    
         <div class="ft-item ft-help">
             <div class="ft-title">

@@ -77,6 +77,10 @@
     
 }
 
+.mr-20 {
+    margin: 40px 0;
+}
+
 .pd-item {
     position: relative;
     box-shadow: 0px 12px 24px rgba(149, 157, 165, 60%);
@@ -85,15 +89,11 @@
     border-radius: 4px;
 }
 
-.mr-20 {
-    margin: 40px 0;
-}
-
 .pd-item:hover {
     height: calc(100% + 60px);
     transform: translateY(-20px) scale(1.05, 1.05);
-
 }
+
 .pd-item__img {
     border-radius: 4px;
     padding-top: 160%;
@@ -184,6 +184,7 @@
 .prlbn-wrap {
     margin-right: 5%;
     margin: 80px 0;
+    margin-right: 6%;
 }
 
 .prlbn-maxim {
@@ -232,6 +233,7 @@
 }
 
 .bl-title {
+
 }
 
 .bl-container {
@@ -288,37 +290,40 @@
 }
 
 .promotion {
+    padding-top: 21.6%;
+    background: url(../img/promotion.jpg) right bottom / cover no-repeat;
+    position: relative;
 
 }
 
 .pmt-img {
-    padding-top: 21.6%;
-    background: url(../img/promotion.jpg) right bottom / cover no-repeat;
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .pmt-title {
-    position: absolute;
     width: 100%;
-    top: 38%;
     font-size: 5rem;
     font-weight: 700;
     text-align: center;
+    line-height: 50px;
+    padding: 20px;
 }
 
 .pmt-content {
-    position: absolute;
     width: 100%;
-    top: 60%;
     font-size: 3rem;
-    font-weight: 300;
     text-align: center;
+    line-height: 30px;
+    padding: 10px;
+    font-weight: 300;
 }
 
 .pmt-btn {
-    position: absolute;
     width: 100%;
-    top: 80%;
     text-align: center;
 }
 
@@ -326,16 +331,13 @@
 
 }
 
-.pmt-link:hover {
-
-}
-
 .brand {
     display: flex;
-    padding: 16px 200px;
-    justify-content: space-around;
+    padding: 16px 0;
+    justify-content: center;
 }
 
 .b-img {
+    padding: 0 20px;
     width: 8%;
 }
