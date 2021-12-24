@@ -1,4 +1,4 @@
-import { renderHeader, renderFooter, renderBreadScrum } from "./main.js";
+import { renderHeader, renderFooter, renderBreadScrum, toggleMenu } from "./main.js";
 import { preBlogs, preBlogType } from './data.js'
 
 const $ = document.querySelector.bind(document)
@@ -6,6 +6,8 @@ const $$ = document.querySelectorAll.bind(document)
 
 renderHeader()
 renderFooter()
+toggleMenu()
+
 // renderBreadScrum()
 export function renderBreadScrum2() {
     let htmls = ''

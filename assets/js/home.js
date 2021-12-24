@@ -1,5 +1,5 @@
 import {preProducts, preSlỉder} from './data.js'
-import { renderHeader, renderFooter } from './main.js'
+import { renderHeader, renderFooter, toggleMenu } from './main.js'
 
 renderHeader()
 renderFooter()
@@ -57,7 +57,7 @@ function renderProduct() {
     `
     products.forEach(function(item, index) {
         htmls += `
-            <div class="grid__column-3 mr-20 grid__column-4-s">
+            <div class="grid__column-3 mr-20 grid__column-4-m grid__column-6-s">
                 <!-- Product -->
                 <div class="pd-item">
                     <div class="pd-item__img" style="background-image: url(./assets/img/product/${item.img}.jpg)"></div>
@@ -94,18 +94,6 @@ function linkDetailProduct() {
     })
 }
 
-function toggleMenu() {
-    const menu = $('.hd-menu-child__list')
-    menu.style.display = 'none'
-    $('.hd-menu__icon').onclick = function() {
-        if(menu.style.display == 'none') {
-            menu.style.display = 'block'
-
-        } else if(menu.style.display == 'block') {
-            menu.style.display = 'none'
-        }
-    }
-}
 
 getSlider()
 changeSlider()

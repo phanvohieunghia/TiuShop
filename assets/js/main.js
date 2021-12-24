@@ -128,19 +128,17 @@ export function renderFooter() {
             </div>    
         </div>    
         <div class="ft-item ft-about">
-            <div class="ft-about-wrap">
-                <div class="ft-title">
-                    About
-                </div>    
-                <div class="ft-content">
-                    <ul class="ft-content__list">
-                        <li class="ft-content__item">About Us</li>
-                        <li class="ft-content__item">Delivery Information</li>
-                        <li class="ft-content__item">Privacy Policy</li>
-                        <li class="ft-content__item">Terms & Conditions</li>
-                        <li class="ft-content__item">Contact Us</li>
-                    </ul>    
-                </div>
+            <div class="ft-title">
+                About
+            </div>    
+            <div class="ft-content">
+                <ul class="ft-content__list">
+                    <li class="ft-content__item">About Us</li>
+                    <li class="ft-content__item">Delivery Information</li>
+                    <li class="ft-content__item">Privacy Policy</li>
+                    <li class="ft-content__item">Terms & Conditions</li>
+                    <li class="ft-content__item">Contact Us</li>
+                </ul>    
             </div>
         </div>    
         <div class="ft-item ft-help">
@@ -198,3 +196,15 @@ export function renderBreadScrum() {
     $_main('.breadcrumbs').innerHTML = htmls
 }
 
+export function toggleMenu() {
+    const menu = $_main('.hd-menu-child__list')
+    menu.style.display = 'none'
+    $_main('.hd-menu__icon').onclick = function() {
+        if(menu.style.display == 'none') {
+            menu.style.display = 'block'
+
+        } else if(menu.style.display == 'block') {
+            menu.style.display = 'none'
+        }
+    }
+}

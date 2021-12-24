@@ -1,5 +1,5 @@
 import {categories, preProducts} from './data.js'
-import { renderHeader, renderFooter, renderBreadScrum } from './main.js'
+import { renderHeader, renderFooter, renderBreadScrum, toggleMenu } from './main.js'
 
 renderHeader()
 renderFooter()
@@ -16,20 +16,17 @@ let totalPage = Math.ceil(products.length / perPage)
 
 function renderPage(key, productList) {
     let perPost = []
-    let itemRow = 4
     let htmls = ''
     perPost = productList.slice(
         (key - 1) * perPage,
         (key - 1) * perPage + perPage
     )
+    htmls += `
+    <div class="grid__row">
+    `
     perPost.forEach(function(item, index) {
-        if (index % itemRow == 0) {
-            htmls += `
-            <div class="grid__row">
-            `
-        }
         htmls += `
-            <div class="grid__column-3">
+            <div class="grid__column-3 mr-20 grid__column-4-m grid__column-6-s">
                 <!-- Product -->
                 <div class="pd-item">
                     <div class="pd-item__img" style="background-image: url(./assets/img/product/${item.img}.jpg)"></div>
@@ -49,12 +46,10 @@ function renderPage(key, productList) {
                 </div>
             </div>
         `
-        if (index % itemRow == 3) {
-            htmls += `
-            </div>
-            `
-        }
     })    
+    htmls += `
+    </div>
+    `
     $('.home-product').innerHTML = htmls
     linkDetailProduct()
 }
@@ -162,3 +157,4 @@ renderPage(1, products)
 renderPagination(totalPage)
 activePaginationItem()
 filterProduct()
+toggleMenu()

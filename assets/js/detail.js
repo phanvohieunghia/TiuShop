@@ -1,8 +1,9 @@
-import { renderHeader, renderFooter, renderBreadScrum } from "./main.js"
+import { renderHeader, renderFooter, renderBreadScrum,toggleMenu } from "./main.js"
 import { preProducts } from "./data.js"
 renderHeader()
 renderFooter()
 renderBreadScrum()
+toggleMenu()
 
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
