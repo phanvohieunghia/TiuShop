@@ -26,12 +26,6 @@ export function renderHeader() {
                     </a>
                     <div class="hd-menu-child__item-decor"></div>
                 </li>
-                <li class="hd-menu-child__item">
-                    <a href="#" class="hd-menu-child__item-link">
-                        Contact
-                    </a>
-                    <div class="hd-menu-child__item-decor"></div>
-                </li>
             </ul>
         </div>
     </div>
