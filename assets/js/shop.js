@@ -57,7 +57,7 @@ function renderPage(key, productList) {
 function linkDetailProduct() {
     $$('.pd-item__icon-search').forEach(function(item, index) {
         item.onclick = function() {
-            location.href = '../../detail.html'
+            location.href = '/detail.html'
             sessionStorage.setItem('dataDetail', item.getAttribute('data'))
         }
     })
