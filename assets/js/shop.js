@@ -1,5 +1,5 @@
 import {categories, preProducts} from './data.js'
-import { renderHeader, renderFooter, renderBreadScrum } from './main.js'
+import { renderHeader, renderFooter, renderBreadScrum, toggleMenu } from './main.js'
 
 renderHeader()
 renderFooter()
@@ -16,20 +16,17 @@ let totalPage = Math.ceil(products.length / perPage)
 
 function renderPage(key, productList) {
     let perPost = []
-    let itemRow = 4
     let htmls = ''
     perPost = productList.slice(
         (key - 1) * perPage,
         (key - 1) * perPage + perPage
     )
+    htmls += `
+    <div class="grid__row">
+    `
     perPost.forEach(function(item, index) {
-        if (index % itemRow == 0) {
-            htmls += `
-            <div class="grid__row">
-            `
-        }
         htmls += `
-            <div class="grid__column-3">
+            <div class="grid__column-3 mr-20 grid__column-4-m grid__column-6-s">
                 <!-- Product -->
                 <div class="pd-item">
                     <div class="pd-item__img" style="background-image: url(./assets/img/product/${item.img}.jpg)"></div>
@@ -39,7 +36,7 @@ function renderPage(key, productList) {
                         <span class="pd-item__price-current">${item.currentPrice}.000đ</span>
                     </div>
                     <div class="pd-item__icon">
-                        <div class="pd-item__icon-wrap pd-item__icon-search">
+                        <div class="pd-item__icon-wrap pd-item__icon-search" data="${item.id}">
                             <i class="fal fa-search"></i>
                         </div>
                         <div class="pd-item__icon-wrap pd-item__icon-cart">
@@ -49,12 +46,10 @@ function renderPage(key, productList) {
                 </div>
             </div>
         `
-        if (index % itemRow == 3) {
-            htmls += `
-            </div>
-            `
-        }
     })    
+    htmls += `
+    </div>
+    `
     $('.home-product').innerHTML = htmls
     linkDetailProduct()
 }
@@ -62,8 +57,8 @@ function renderPage(key, productList) {
 function linkDetailProduct() {
     $$('.pd-item__icon-search').forEach(function(item, index) {
         item.onclick = function() {
-            location.href = '../../detail.html'
-            console.log('nghia')
+            location.href = '/detail.html'
+            sessionStorage.setItem('dataDetail', item.getAttribute('data'))
         }
     })
 }
@@ -112,18 +107,6 @@ function activePaginationItem() {
     })
 }
 
-function showCategory() {
-    let htmls = ''
-    categories.forEach(function(category, index) {
-        htmls += `
-        <li class="category-item">
-            <a class="category-item__link">${category}</a>
-        </li>
-        `
-    })
-    $('.category-list').innerHTML = htmls
-}
-
 function filterProduct() {
     const categoryItems = $$('.category-item')
     categoryItems.forEach(function(item, index) {
@@ -155,7 +138,18 @@ function updateBreadcrumbs(value) {
         <a href="" class="bc-item bc-category">${value}</a>
     `
     $('.breadcrumbs').innerHTML = htmls
+}
 
+function showCategory() {
+    let htmls = ''
+    categories.forEach(function(category, index) {
+        htmls += `
+        <li class="category-item">
+            <a class="category-item__link">${category}</a>
+        </li>
+        `
+    })
+    $('.category-list').innerHTML = htmls
 }
 
 showCategory()
@@ -163,3 +157,4 @@ renderPage(1, products)
 renderPagination(totalPage)
 activePaginationItem()
 filterProduct()
+toggleMenu()

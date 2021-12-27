@@ -1,5 +1,5 @@
 import {preProducts, preSlỉder} from './data.js'
-import { renderHeader, renderFooter } from './main.js'
+import { renderHeader, renderFooter, toggleMenu } from './main.js'
 
 renderHeader()
 renderFooter()
@@ -51,18 +51,15 @@ function getSlierString() {
 }
 
 function renderProduct() {
-    let itemRow = 4
     let htmls = ''
+    htmls += `
+    <div class="grid__row">
+    `
     products.forEach(function(item, index) {
-        if (index % itemRow == 0) {
-            htmls += `
-            <div class="grid__row">
-            `
-        }
         htmls += `
-            <div class="grid__column-3">
+            <div class="grid__column-3 mr-20 grid__column-4-m grid__column-6-s">
                 <!-- Product -->
-                <div class="pd-item">
+                <div class="pd-item" ata-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <div class="pd-item__img" style="background-image: url(./assets/img/product/${item.img}.jpg)"></div>
                     <div class="pd-item__name">${item.name}</div>
                     <div class="pd-item__price">
@@ -70,7 +67,7 @@ function renderProduct() {
                         <span class="pd-item__price-current">${item.currentPrice}.000đ</span>
                     </div>
                     <div class="pd-item__icon">
-                        <div class="pd-item__icon-wrap pd-item__icon-search">
+                        <div class="pd-item__icon-wrap pd-item__icon-search" data="${item.id}">
                             <i class="fal fa-search"></i>
                         </div>
                         <div class="pd-item__icon-wrap pd-item__icon-cart">
@@ -80,12 +77,10 @@ function renderProduct() {
                 </div>
             </div>
         `
-        if (index % itemRow == 3) {
-            htmls += `
-            </div>
-            `
-        }
     })
+    htmls += `
+    </div>
+    `
     $('.home-product').innerHTML = htmls
     linkDetailProduct()
 }
@@ -93,12 +88,14 @@ function renderProduct() {
 function linkDetailProduct() {
     $$('.pd-item__icon-search').forEach(function(item, index) {
         item.onclick = function() {
+                sessionStorage.setItem('dataDetail', item.getAttribute('data'))
             location.href = '../../detail.html'
-            console.log('nghia')
         }
     })
 }
 
+
 getSlider()
 changeSlider()
 renderProduct()
+toggleMenu()

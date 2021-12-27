@@ -1,0 +1,95 @@
+/* PC */
+@media only screen and (min-width: 1024px) {
+}
+
+/* Tablet */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+
+    .home-product .grid__row .grid__column-3:last-child,
+    .home-product .grid__row .grid__column-3:nth-last-child(2) {
+        display: none;
+    }
+
+    .sd-title {
+        left: 25%;
+        font-size: 5rem;
+    }
+
+    .prlbn-title {
+        margin: 8px 0;
+        font-size: 6rem;
+    }
+    .prlbn-maxim {
+        font-size: 1.4rem;
+        padding: 16px 20px;
+        font-weight: 500;
+    }    
+    .prlbn-title  {
+        font-size: 4.6rem;
+    }
+    .brlbn-subtitle {
+        font-size: 1.9rem;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    .bl-container .grid__full-width .grid__row .grid__column-3:last-child {
+        display: none;
+    }
+
+    .pmt-title {
+    line-height: 40px;
+    font-size: 4rem;
+    }
+    .pmt-content {
+        font-size: 2.4rem;
+        line-height: 24px;
+    }
+}
+/* ----------------------------------------------------------- */
+/* Mobile */
+@media only screen and (max-width: 739px) {
+  
+    .home-product .grid__row .grid__column-3:last-child,
+    .home-product .grid__row .grid__column-3:nth-last-child(2),
+    .home-product .grid__row .grid__column-3:nth-last-child(3),
+    .home-product .grid__row .grid__column-3:nth-last-child(4) {
+        display: none;
+    }
+
+    .sd-title {
+        left: 25%;
+        font-size: 5rem;
+    }
+    
+    .prlbn-title {
+        margin: 8px 0;
+        font-size: 6rem;
+    }
+    .prlbn-maxim {
+        font-size: 1.4rem;
+        padding: 16px 20px;
+        font-weight: 500;
+    }    
+    .prlbn-title  {
+        font-size: 4.6rem;
+    }
+    .brlbn-subtitle {
+        font-size: 1.9rem;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+    .bl-container .grid__full-width .grid__row .grid__column-3:last-child,
+    .bl-container .grid__full-width .grid__row .grid__column-3:nth-last-child(2) {
+        display: none;
+    }
+    .pmt-title {
+    line-height: 40px;
+    font-size: 4rem;
+    }
+    .pmt-content {
+        font-size: 2.4rem;
+        line-height: 24px;
+    }
+
+}

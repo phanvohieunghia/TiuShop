@@ -77,6 +77,10 @@
     
 }
 
+.mr-20 {
+    margin: 40px 0;
+}
+
 .pd-item {
     position: relative;
     box-shadow: 0px 12px 24px rgba(149, 157, 165, 60%);
@@ -84,11 +88,12 @@
     transition: all 0.3s ease-in-out;
     border-radius: 4px;
 }
+
 .pd-item:hover {
     height: calc(100% + 60px);
     transform: translateY(-20px) scale(1.05, 1.05);
-
 }
+
 .pd-item__img {
     border-radius: 4px;
     padding-top: 160%;
@@ -165,27 +170,28 @@
 }
 
 .parallax-banner {
-    height: 388px;
-    padding: 100px 0;
     background-image: url(../img/parallex_banner.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .prlbn-wrap {
-    margin-left: 50%;
-    margin-right: 10%;
+    margin-right: 5%;
+    margin: 80px 0;
+    margin-right: 6%;
 }
 
 .prlbn-maxim {
     display: inline-block;
     font-size: 1.9rem;
-    padding: 16px 0;
+    padding: 16px 80px;
     border: 1px solid var(--primary-color);
-    width: 350px;
     color: var(--white-color);
     font-weight: 500;
 }
@@ -227,6 +233,7 @@
 }
 
 .bl-title {
+
 }
 
 .bl-container {
@@ -249,6 +256,7 @@
     font-size: 1.6rem;
     margin: 16px 0;
 }
+
 .bl-item__date {
 
 }
@@ -278,42 +286,46 @@
 .bl-item__btn {
     margin-top: 8px;
 }
+
 .bl-item__link {
 
 }
 
 .promotion {
+    padding-top: 21.6%;
+    background: url(../img/promotion.jpg) right bottom / cover no-repeat;
+    position: relative;
 
 }
 
 .pmt-img {
-    padding-top: 21.6%;
-    background: url(../img/promotion.jpg) right bottom / cover no-repeat;
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .pmt-title {
-    position: absolute;
     width: 100%;
-    top: 38%;
     font-size: 5rem;
     font-weight: 700;
     text-align: center;
+    line-height: 50px;
+    padding: 20px;
 }
 
 .pmt-content {
-    position: absolute;
     width: 100%;
-    top: 60%;
     font-size: 3rem;
-    font-weight: 300;
     text-align: center;
+    line-height: 30px;
+    padding: 10px;
+    font-weight: 300;
 }
 
 .pmt-btn {
-    position: absolute;
     width: 100%;
-    top: 80%;
     text-align: center;
 }
 
@@ -321,16 +333,13 @@
 
 }
 
-.pmt-link:hover {
-
-}
-
 .brand {
     display: flex;
-    padding: 16px 200px;
-    justify-content: space-around;
+    padding: 16px 0;
+    justify-content: center;
 }
 
 .b-img {
+    padding: 0 20px;
     width: 8%;
 }

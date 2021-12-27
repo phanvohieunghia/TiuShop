@@ -4,6 +4,31 @@ const $$_main = document.querySelectorAll.bind(document)
 export function renderHeader() {
     let htmls = ''
     htmls += `
+    <div class="hd-menu">
+        <div class="hd-menu__icon">
+            <i class="fad fa-bars"></i>
+            <ul class="hd-menu-child__list">
+                <li class="hd-menu-child__item" data-aos="fade-up" data-aos-anchor-placement="top-center">
+                    <a href="./home.html" class="hd-menu-child__item-link">
+                        Home
+                    </a>
+                    <div class="hd-menu-child__item-decor"></div>
+                </li>
+                <li class="hd-menu-child__item">
+                    <a href="./shop.html" class="hd-menu-child__item-link">
+                        Shop
+                    </a>
+                    <div class="hd-menu-child__item-decor"></div>
+                </li>
+                <li class="hd-menu-child__item">
+                    <a href="./blog.html" class="hd-menu-child__item-link">
+                        Blog
+                    </a>
+                    <div class="hd-menu-child__item-decor"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
     <div class="hd-brand">
         <a href="./home.html" class="hd-brand__link">
             <img class="hd-brand__logo" src="./assets/img/tuishop_logo_full.png" alt="">
@@ -34,7 +59,7 @@ export function renderHeader() {
                     Contact
                 </a>
                 <div class="hd-navigation__item-decor"></div>
-                </li>
+            </li>
         </ul>
     </nav>
     <div class="hd-search">
@@ -108,7 +133,7 @@ export function renderFooter() {
                     <li class="ft-content__item">Terms & Conditions</li>
                     <li class="ft-content__item">Contact Us</li>
                 </ul>    
-            </div>    
+            </div>
         </div>    
         <div class="ft-item ft-help">
             <div class="ft-title">
@@ -163,4 +188,17 @@ export function renderBreadScrum() {
         <a href="" class="bc-item bc-category">All products</a>
     `
     $_main('.breadcrumbs').innerHTML = htmls
+}
+
+export function toggleMenu() {
+    const menu = $_main('.hd-menu-child__list')
+    menu.style.display = 'none'
+    $_main('.hd-menu__icon').onclick = function() {
+        if(menu.style.display == 'none') {
+            menu.style.display = 'block'
+
+        } else if(menu.style.display == 'block') {
+            menu.style.display = 'none'
+        }
+    }
 }
