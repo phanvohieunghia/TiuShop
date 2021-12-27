@@ -59,7 +59,7 @@ function renderProduct() {
         htmls += `
             <div class="grid__column-3 mr-20 grid__column-4-m grid__column-6-s">
                 <!-- Product -->
-                <div class="pd-item">
+                <div class="pd-item" ata-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <div class="pd-item__img" style="background-image: url(./assets/img/product/${item.img}.jpg)"></div>
                     <div class="pd-item__name">${item.name}</div>
                     <div class="pd-item__price">

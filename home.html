@@ -13,18 +13,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-pro-5.13.0-web/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="app">
         <header class="header">
         </header>
         
-        <div class="slider">
+        <div class="slider" data-aos="fade-up" data-aos-anchor-placement="top-center">
             <div class="sd-content">
             </div>
         </div>
         
-        <div class="product">
+        <div class="product" data-aos="fade-up" data-aos-anchor-placement="top-center">
             <div class="pd-title title">
                 New Products
             </div>
@@ -37,7 +38,7 @@
             </div>
         </div>
         
-        <div class="parallax-banner">
+        <div class="parallax-banner" data-aos="fade-up" data-aos-anchor-placement="top-center">
             <div class="prlbn-wrap">
                 <div class="prlbn-maxim">
                     The Joy Of Dressing Is An Art!
@@ -56,7 +57,8 @@
             </div>
         </div>
 
-        <div class="blog">
+        <div class="blog"
+        data-aos="fade-up" data-aos-anchor-placement="top-center">
             <div class="bl-title title">
                 Our Blogs
             </div>
@@ -180,7 +182,7 @@
             </div>
         </div>    
         
-        <div class="promotion">
+        <div class="promotion" data-aos="fade-up" data-aos-anchor-placement="top-center">
             <div class="pmt-img">
                 <div class="pmt-title">Deal Of The Week</div>
                 <div class="pmt-content">GET 50% OFF YOUR ORDER OF $199 OR MORE</div>
@@ -192,7 +194,7 @@
             </div>
         </div>
 
-        <div class="brand">
+        <div class="brand" data-aos="fade-up" data-aos-anchor-placement="top-center">
             <img src="./assets/img/brand/brand_1.png" alt="brand 1" class="b-img">
             <img src="./assets/img/brand/brand_5.png" alt="brand 5" class="b-img">
             <img src="./assets/img/brand/brand_2.png" alt="brand 2" class="b-img">
@@ -203,10 +205,14 @@
             <img src="./assets/img/brand/brand_8.png" alt="brand 8" class="b-img">            
         </div>
       
-        <footer class="footer">
+        <footer class="footer" data-aos="fade-up" data-aos-anchor-placement="top-center">
 
         </footer>    
     </div>    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script type="module" src="./assets/js/home.js"></script>
 </body>    
 

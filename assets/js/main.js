@@ -8,7 +8,7 @@ export function renderHeader() {
         <div class="hd-menu__icon">
             <i class="fad fa-bars"></i>
             <ul class="hd-menu-child__list">
-                <li class="hd-menu-child__item">
+                <li class="hd-menu-child__item" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <a href="./home.html" class="hd-menu-child__item-link">
                         Home
                     </a>
